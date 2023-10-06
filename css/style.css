@@ -79,6 +79,12 @@ ul {
 	color: #ff0000;
 	 
 }
+#nav li a:hover{
+	color:#ff0;
+	background-color: brown;
+}
+
+
 /*
 Because the header content is outside the wrap <div>,
 we need to use the same "margin: 0 auto" trick to center
