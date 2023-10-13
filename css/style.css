@@ -6,7 +6,7 @@ a little easier
 */
 body {
 	margin: 0 auto;
-	width: 800px;
+	/* width: 800px; */
 	padding: 0;
 	background: #7a2122 url('../images/body_bg.gif') repeat-x top;
 	font-family: Helvetica, sans-serif;
@@ -40,7 +40,7 @@ ul {
 #masthead {
 	margin: 0 auto ;
 	margin-top: 20px;
-	width: 800px;
+	/* width: 800px; */
 	color: #fff;
 }
 
@@ -52,10 +52,10 @@ ul {
 	float: right;
 	margin: 50px 10px 0 0;
 	font-size: 1.4em;
-	background: #333;
-	padding: 10px;
-	border: 2px solid #fff;
-	border-radius: 20px;
+	/* background: #333; */
+	/* padding: 10px; */
+	/* border: 2px solid #fff;
+	border-radius: 20px; */
 }
 
  
@@ -94,32 +94,32 @@ the layout
 	clear: both;
 	margin: 0 auto;
 	padding: 10px;
-	width: 780px;
+	/* width: 780px; */
 	background: #fff;
 	border: 10px solid #5c0505;
 }
 
-#main_title img {
+/* #main_title img {
 	border: 10px solid #ccc;
-}
+} */
 
-#main_title h1 {
+/* #main_title h1 {
 	font-size: 2em;
 	margin: 10px 0 0 0;
 	padding: 10px;
 	text-align: center;
 	background: url('../images/tagline_bg.gif') repeat-x;
-}
+} */
 
-#content, #sidebar {
+/* #content, #sidebar {
 	width: 360px;
 	margin: 20px 0 20px 0;
 	padding: 10px;
-}
+} */
 
-#content {
+/* #content {
 	float: right;
-}
+} */
 
 #content h2 {
 	font-size: 2.4em;
@@ -139,10 +139,10 @@ the layout
 	margin: 0 0 10px 0;
 }
 
-#sidebar {
+/* #sidebar {
 	float: left;
 	background: #eee;
-}
+} */
 
 #sidebar h2 {
 	font-weight: bold;
@@ -151,11 +151,11 @@ the layout
 	padding: 5px;
 }
 
-#port li {
+/* #port li {
 	margin: 0 10px 20px 0;
 	float: left;
 	border: 5px solid #ddd;
-}
+} */
 
 #footer {
 	clear: both;
