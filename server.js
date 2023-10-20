@@ -29,7 +29,7 @@ server.set("views", __dirname+"/views");
 
 server.get("/contact", function(req, res){
     //res.send("");
-    res.redirect("/BS5_Ex2 Vue.html");
+    res.redirect("https:/md.nutc.edu.tw");
 }); 
 
 server.get("/service", function(req, res){
@@ -64,6 +64,6 @@ server.post("/contact", function(req, res){
 })
 
 
-server.listen(8000, function(){
+server.listen(5500, function(){
     console.log("Server is running at port 8000!")
 })
