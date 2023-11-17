@@ -654,14 +654,15 @@
     <script>
         var myObject=new Vue({
         el: "#portfolio",
-        data: {Portfolio:[
-            {href: '#portfolioModal1', imgSrc:"img/portfolio/roundicons.png", title:"Round Icons", subtitle:"Graphic Design"},
-            {href: '#portfolioModal2', imgSrc:"img/portfolio/startup-framework.png", title:"Startup Framework", subtitle:"GrWebsite Design"},
-            {href: '#portfolioModal3', imgSrc:'img/portfolio/treehouse.png', title:'Treehouse', subtitle:'Website Design'},
-            {href: '#portfolioModal4', imgSrc:'img/portfolio/golden.png', title:'Golden', subtitle:'Website Design'},
-            {href: '#portfolioModal5', imgSrc:'img/portfolio/escape.png', title:'Escape', subtitle:'Website Design'},
-            {href: '#portfolioModal6', imgSrc:'img/portfolio/dreams.png', title:'Dreams', subtitle:'3D Design'}
-        ] }
+        data: {Portfolio: []}
+        })
+        $.ajax({
+            url:"/portfolio",
+            method: "get",
+            dataType: "json",
+            success: function(data){
+                myObject.Portfolio = data;
+            }
         })
 
         var vueService = new Vue({
