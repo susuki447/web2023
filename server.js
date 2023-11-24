@@ -4,10 +4,16 @@ var bodyParser = require("body-parser");
 server = express();
 var fs = require("fs");
 
-server.use(express.static("Bs5_Vue"));//web root
+server.use(express.static(__dirname+"/Bs5_Vue"));//web root
 //server.use(express.static("md110"));//web root
-server.use(bodyParser.urlencoded());
+server.use(bodyParser.urlencoded({extended:true}));
 server.use(bodyParser.json());
+
+// const fileUpload = require("express-fileupload");
+// server.use(fileUpload())
+const multer  = require('multer')
+const upload = multer({ dest: '/' })
+
 
 var DB = require("nedb-promises");
 var ContactDB = DB.create("contact.db");
@@ -27,18 +33,31 @@ server.set("view engine", "ejs");
 server.set("views", __dirname+"/views");
 
 
-server.get("/contact", function(req, res){
+server.get("/contact",  upload.single('myFile1'), function(req, res){
     //res.send("");
-    res.redirect("https:/md.nutc.edu.tw");
+    //var form = formidable({maxFileSize: 200*1024});
+    // const form = new formidable.IncomingForm();
+    // form.maxFileSize = 200*1024;
+    // form.parse(req, function (err,fields,files){
+    //     console.log(fields);
+    //     console.log(files);
+        
+    //     res.send("OK");
+    // });
+    console.log(req.file)
+    res.send("End");
 });
 
-server.post("/contact", function(req, res){
-    console.log(req.body);
-    ContactDB.insert(req.body);
+server.post("/contact", upload.single('myFile1'), function(req, res){
+    //var form = formidable({maxFileSize: 200*1024});
+     console.log(req.files)
+     res.send("End");
+})
+   
+
     //email to manager
     //res.send();
-    res.redirect("/");
-})
+  
 
 server.get("/service", function(req, res){
 
