@@ -11,8 +11,8 @@ server.use(bodyParser.json());
 
 // const fileUpload = require("express-fileupload");
 // server.use(fileUpload())
-const multer  = require('multer')
-const upload = multer({ dest: '/' })
+const formidable  = require('formidable')
+ 
 
 
 var DB = require("nedb-promises");
@@ -33,25 +33,31 @@ server.set("view engine", "ejs");
 server.set("views", __dirname+"/views");
 
 
-server.get("/contact",  upload.single('myFile1'), function(req, res){
+server.post("/contact",   function(req, res){
     //res.send("");
     //var form = formidable({maxFileSize: 200*1024});
-    // const form = new formidable.IncomingForm();
+     const form = new formidable.IncomingForm();
     // form.maxFileSize = 200*1024;
-    // form.parse(req, function (err,fields,files){
-    //     console.log(fields);
-    //     console.log(files);
+     form.parse(req, function (err,fields,files){
+        console.log(fields);
+        console.log(files);
         
-    //     res.send("OK");
-    // });
-    console.log(req.file)
-    res.send("End");
+        res.send("OK");
+     });
+    
 });
 
-server.post("/contact", upload.single('myFile1'), function(req, res){
+server.get("/contact",   function(req, res){
     //var form = formidable({maxFileSize: 200*1024});
-     console.log(req.files)
-     res.send("End");
+    const form = new formidable.IncomingForm();
+    // form.maxFileSize = 200*1024;
+     form.parse(req, function (err,fields,files){
+        console.log(fields);
+        console.log(files);
+        
+        res.send("OK");
+     });
+ 
 })
    
 
