@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 server = express();
 var fs = require("fs");
 
-server.use(express.static(__dirname+"/Bs5_Vue"));//web root
+server.use(express.static(__dirname+"/Parallax"));//web root
 //server.use(express.static("md110"));//web root
 server.use(bodyParser.urlencoded({extended:true}));
 server.use(bodyParser.json());
