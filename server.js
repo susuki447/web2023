@@ -41,8 +41,11 @@ server.post("/contact",   function(req, res){
      form.parse(req, function (err,fields,files){
         console.log(fields);
         console.log(files);
-        
-        res.send("OK");
+        fs.renameSync(files.imgSrc.filepath, "Bs5_Vue/upload/"+files.imgSrc.originalFilename);
+        var newData = fields;
+        newData.imgSrc = "upload/"+files.imgSrc.originalFilename;
+        PortfolioDB.insert(newData);
+        res.redirect("/");
      });
     
 });
