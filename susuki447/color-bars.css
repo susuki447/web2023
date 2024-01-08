@@ -1,0 +1,118 @@
+/* Color Bar */
+.color-bars {
+  width: 100%;
+}
+
+.color-bar {
+  height: 3px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.dropdown-header {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 0;
+  font-size: 0.76563rem;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+/* Preloader */
+.smooth-loader-wrapper {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 700000;
+}
+
+.smooth-loader-wrapper .smooth-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2100;
+  line-height: 0;
+  transform: translate(-50%, 50%);
+}
+
+.smooth-loader-wrapper .smooth-loader .loader {
+  position: relative;
+  width: 110px;
+}
+
+.smooth-loader-wrapper .smooth-loader .dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #ccc;
+  position: absolute;
+}
+
+.smooth-loader-wrapper .smooth-loader .dot-1 {
+  animation: animateDot1 1.5s linear infinite;
+  left: 30px;
+  background: #f0c24b;
+}
+
+.smooth-loader-wrapper .smooth-loader .dot-2 {
+  animation: animateDot2 1.5s linear infinite;
+  animation-delay: 0.5s;
+  left: 60px;
+  background: #ea7066;
+}
+
+.smooth-loader-wrapper .smooth-loader .dot-3 {
+  animation: animateDot3 1.5s linear infinite;
+  left: 30px;
+  background: #b5d56a;
+}
+
+.smooth-loader-wrapper .smooth-loader .dot-4 {
+  animation: animateDot4 1.5s linear infinite;
+  animation-delay: 0.5s;
+  left: 60px;
+  background: #84bed6;
+}
+
+
+/* Fixed navber when scroll up */
+.up-scroll .navbar-scrollUp.navbar-sticky {
+  transform: translateY(-100%);
+  transition: .4s ease-in-out;
+  box-shadow: none;
+}
+
+.navbar-white {
+  background-color: #fff;
+}
+
+/* Header */
+.header {
+  position: relative;
+}
+
+.header-absolute {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}

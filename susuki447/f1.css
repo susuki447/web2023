@@ -1,0 +1,15 @@
+.nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-text {
+  margin-right: 5px;
+}
+
+.menu-image {
+  width: 20px; /* 设置图片宽度 */
+  height: 20px; /* 设置图片高度 */
+  margin-top: -3px; /* 设置图片向上的偏移量，调整此值以调整图片位置 */
+}

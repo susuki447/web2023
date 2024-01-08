@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>susuki447</title>
+  <meta name="keywords" content="" <meta name="NUTCYAAA" content="IDK">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/寶寶.ico" type="image/x-icon">
+  <!-- css -->
+  <link rel="stylesheet" href="body.css">
+
+  <style>
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      gap: 100px;
+      position: relative;
+    }
+
+    .image {
+      flex: 1;
+      max-width: 200px;
+      position: relative;
+      transition: transform 0.3s, border 0.3s;
+      cursor: pointer;
+    }
+
+
+    .image img {
+      max-width: 200px;
+      height: 200px;
+    }
+
+    .image:hover {
+      transform: scale(1.1);
+      border: 2px solid white;
+    }
+
+    .image-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      border: 2px solid white;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: none;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .image-caption a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .image:hover .image-caption {
+      display: block;
+    }
+
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .popup.active {
+      display: flex;
+    }
+
+    .popup-content img {
+      max-width: 100%;
+      /* 確保不超過彈出窗口 */
+      height: auto;
+    }
+  </style>
+
+
+</head>
+
+<body id="body" class="up-scroll">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+
+  <!--頁首的高度將根據其內容的高度來調整-->
+  <header class="header" id="pageTop" style="height: auto;">
+    <!-- Top Color Bar 採條 -->
+    <div class="color-bars">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col color-bar bg-purple d-none d-md-block"></div>
+            <div class="col color-bar bg-blue d-none d-md-block"></div>
+            <div class="col color-bar bg-purple d-none d-md-block"></div>
+            <div class="col color-bar bg-blue d-none d-md-block"></div>
+            <div class="col color-bar bg-purple d-none d-md-block"></div>
+            <div class="col color-bar bg-indigo d-none d-md-block"></div>
+            <div class="col color-bar bg-purple"></div>
+            <div class="col color-bar bg-blue"></div>
+            <div class="col color-bar bg-purple"></div>
+            <div class="col color-bar bg-blue"></div>
+            <div class="col color-bar bg-purple"></div>
+            <div class="col color-bar bg-indigo"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 上面的 nav bar 圖標尚未新增修改 -->
+
+    <nav class="navbar navbar-expand-md navbar-white" style="opacity: 1;">
+      <div class="container">
+        <!-- WEPET圖標 未放連接 -->
+        <a class="navbar-brand" href="home.html">
+          <img class="d-inline-block" src="img/logo.png" width="80" height="80" alt="logo">
+        </a>
+        <!-- 控制導航列的收合和展開 -->
+        <button class="navbar-toggler py-2" type="button" data-toggle="collapse" data-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <!-- 登入 nar bar -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item dropdown bg-success">
+              <a class="nav-link" href="https://twitter.com/Susuki447447"> <!-- 這邊放網址 -->
+                <i class="" aria-hidden="true"></i>
+                <img src="img/寶寶.png" alt="Your Image" class="nav-icon" />
+
+                <span class="jump-text">Twitter</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown bg-pink">
+              <a class="nav-link" href="https://www.instagram.com/susuki447/"> <!-- 這邊放網址 -->
+                <i class="" aria-hidden="true"></i>
+                <img src="img/寶寶.png" alt="Your Image" class="nav-icon" />
+
+                <span>Instagram</span> <!--  nar bar -->
+              </a>
+            </li>
+            <li class="nav-item dropdown bg-info">
+              <a class="nav-link" href="https://clibo.tw/users/EC0nKY"> <!-- 這邊放網址 -->
+                <i class="" aria-hidden="true"></i>
+                <img src="img/寶寶.png" alt="Your Image" class="nav-icon" />
+                <span>Clibo</span> <!--  nar bar -->
+              </a>
+            </li>
+
+
+
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- 上面的輪播圖 -->
+  <div class="main-wrapper home" style="height: auto !important;">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="img/page1.jpg" width="1140" height="806" style="display:block; margin:auto;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/page2.jpg" width="1140" height="806" style="display:block; margin:auto;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/page3.jpg" width="1140" height="806" style="display:block; margin:auto;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/page4.jpg" width="1140" height="806" style="display:block; margin:auto;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/page5.jpg" width="1140" height="806" style="display:block; margin:auto;">
+        </div>
+
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Your Title</title>
+      <style>
+        h1 {
+          background-color: rgb(127, 123, 205);
+          text-align: center;
+          padding: 100px;
+          /* 調整內邊距大小，您可以根據需要進行調整 */
+        }
+      </style>
+    </head>
+
+    <body>
+      <h1>老師求求您不要當我 我為了做出這個網站已經哭兩次ㄌ</h1>
+    </body>
+
+
+    <head>
+      <!-- 圖片自動輪播 -->
+      <style>
+        .carousel-container {
+          max-width: 1500px;
+          margin: auto;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .carousel {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+          width: 100%;
+          height: 100%;
+        }
+      </style>
+
+    <body>
+      <div class="carousel-container">
+        <div class="carousel autoSlide">
+          <img src="img/20生日.jpg" width="1020" height="412" alt="羅東">
+          <img src="img/野餐.jpg" width="1020" height="412" alt="羅東">
+          <img src="img/體育周.jpg" width="1020" height="412" alt="羅東">
+          <img src="img/xji6.jpg" width="1020" height="412" alt="羅東">
+        </div>
+
+
+        <script>
+          const carousel = document.querySelector('.autoSlide');
+          let counter = 0;
+
+          function nextSlide() {
+            if (counter < 3) {
+              counter++;
+            } else {
+              counter = 0;
+            }
+            updateCarousel();
+          }
+
+          function updateCarousel() {
+            const offset = -counter * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+          }
+
+          setInterval(nextSlide, 2000); // 切換圖片的時間間隔（毫秒）
+        </script>
+
+        </head>
+
+
+
+
+
+
+        <!-- 下面的四張圖 -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Title</title>
+        <style>
+          .image-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 將列數改為 4 */
+            gap: 10px;
+            /* 調整圖片之間的間距 */
+          }
+
+          .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+          }
+        </style>
+        </head>
+
+        <body>
+          <div class="image-container">
+            <img src="img/青蔥.jpg" alt="Image 1">
+            <img src="img/57.jpg" alt="Image 2">
+            <img src="img/頭.jpg" alt="Image 3">
+            <img src="img/82.jpg" alt="Image 4">
+          </div>
+
+
+        </body>
+
+    </html>
